@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Lora&family=Roboto&display=swap');
+
+$light-color:#dee2e6;
+$dark-color:#1d3557;
+
+*{
+    font-family: 'Gloock', serif;
+}
+
+// banner滿版圖片區
+.banner{
+    position: relative;
+    text-align: center;
+    .ban-img{
+        object-fit: cover;
+        width: 100%;
+        height: 50vh;
+    }
+    .ban-text1{
+        position: absolute;
+        width: 100%;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 60px;
+        font-weight: 800;
+        color: rgb(255, 255, 255,1);
+        letter-spacing: 8px;
+        animation: move1 3s;
+        text-shadow: 0.1em 0.1em 0.2em #000;
+    }
+    .ban-text2{
+        position: absolute;
+        color: rgb(255, 255, 255,1);
+        top: 63%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        animation: move2 3s;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-shadow: 0.1em 0.1em 0.2em #000;
+    }
+}
+
+// banner滿版圖片區文字 welcome(.ban-text1)動畫
+@keyframes move1 {
+    0%{
+        top:55%;
+        color: rgb(255, 255, 255,0);
+        text-shadow: none;
+    }
+    25%{
+        top:55%;
+        letter-spacing: 30px;
+        text-shadow: none;
+    }
+    75%{
+        letter-spacing: 8px;
+        top:50%;
+    }
+    100%{
+        top:50%;
+    }
+}
+
+// banner滿版圖片區 Hello!I'm Anna Liu.(.ban-text2)動畫
+@keyframes move2{
+    0%{
+        color: rgb(255, 255, 255,0);
+        top:67%;
+        text-shadow: none;
+    }
+    25%{
+        color: rgb(255, 255, 255,0);
+        top:67%;
+        text-shadow: none;
+    }
+    75%{
+        top:63%;
+    }
+}
+
+.about a{
+    text-decoration: none;
+    color: $dark-color;
+}
+// 按鈕
+.btn{
+    background-color: $dark-color;
+    color:#fff;
+}
+
+h1{
+    font-weight: 800;
+    color:$dark-color;
+    margin: 20px;
+}
+h3{
+    margin: 15px;
+    font-weight: 600;
+}
+
+
+// 教育區icon
+.icon-book{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background-color: $dark-color;
+    position: relative;
+    border-radius: 50%;
+    color:#fff;
+    svg{
+        position: absolute;
+        top:18px;
+        left:18px
+    }
+}
+
+// 技能圓餅圖
+.circle{
+    width: 60px;
+    height: 60px;
+    border: 15px solid $light-color;
+    border-radius: 50%;
+    rotate: 45deg;
+    margin: auto;
+}
+.c-90{
+    border-top:15px solid $dark-color;
+}
+.c-180{
+    border-top:15px solid $dark-color;
+    border-right:15px solid $dark-color;
+}
+.c-270{
+    border-top:15px solid $dark-color;
+    border-right:15px solid $dark-color;
+    border-bottom: 15px solid $dark-color;
+}
+
+.skills{
+    text-align: center;
+}
+
+
+// 工作經驗list樣式
+.exp{
+    ul li::marker{
+        color:$dark-color;
+    }
+}
+
+//Expirence時間軸的點
+.dot{
+    position: relative;
+    .bi{
+        position: absolute;
+        right: -8px;
+        top:5px;
+        color:$dark-color;
+    }
+}
+
+footer{
+    background-color:$dark-color;
+    height: 70px;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+
+
+
